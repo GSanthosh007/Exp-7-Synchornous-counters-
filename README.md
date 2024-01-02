@@ -46,41 +46,54 @@ This type of counter is normally referred to as a Down Counter, (CTD). In a bina
 
 4-bit Count Down Counter
 ### Procedure
-/* write all the steps invloved */
-
-
+![Screenshot 2024-01-02 133231](https://github.com/GSanthosh007/Exp-7-Synchornous-counters-/assets/147527586/e67865be-5375-4cfe-a230-b7e7a269684b)
 
 ### PROGRAM 
-/*
+/*Program for flipflops and verify its truth table in quartus using Verilog programming.
+
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
+Developed by: SANTHOSH G
+RegisterNumber: 212223240152 
 */
+## UP COUNTER
+
+![Screenshot 2024-01-02 134031](https://github.com/GSanthosh007/Exp-7-Synchornous-counters-/assets/147527586/a9a7f2da-2760-420b-803d-91f09d3a5f7f)
 
 
+## DOWN COUNTER
+module dc(clk,A);
+input clk;
+output reg [2:0]A;
+always @(posedge clk)
+begin
+A[2]=(((~A[0])&(~A[1]))^A[2]);
+A[1]=(~A[0])^A[1];
+A[0]=1^A[0];
+end
+endmodule
+## RTL LOGIC UP COUNTER AND DOWN COUNTER
+## UP COUNTER
+![Screenshot 2024-01-02 134257](https://github.com/GSanthosh007/Exp-7-Synchornous-counters-/assets/147527586/250d17c7-3172-4132-a72a-8fc5bb26bb7f)
 
-
-
-
-### RTL LOGIC UP COUNTER AND DOWN COUNTER  
-
-
-
-
-
-
-
-
+## DOWN COUNTER
+![Screenshot 2024-01-02 134338](https://github.com/GSanthosh007/Exp-7-Synchornous-counters-/assets/147527586/877c7ad1-48c4-42b6-b6d1-f3d998e57028)
 
 ### TIMING DIGRAMS FOR COUNTER  
+## UP COUNTER
 
+![Screenshot 2024-01-02 134423](https://github.com/GSanthosh007/Exp-7-Synchornous-counters-/assets/147527586/cdadee65-8c68-485c-9fd8-deb87f7cf95f)
 
+## DOWN COUNTER
+![Screenshot 2024-01-02 134519](https://github.com/GSanthosh007/Exp-7-Synchornous-counters-/assets/147527586/2abe31a5-34dd-495c-9d8e-d7307a532b15)
 
 
 
 ### TRUTH TABLE 
+## UP COUNTER
+![Screenshot 2024-01-02 134540](https://github.com/GSanthosh007/Exp-7-Synchornous-counters-/assets/147527586/66c5b368-32eb-4488-8790-c866b251eef0)
 
-
+## DOWN COUNTER
+![Screenshot 2024-01-02 134636](https://github.com/GSanthosh007/Exp-7-Synchornous-counters-/assets/147527586/03834811-13b7-4bd4-82bc-93c49d24da66)
 
 
 
